@@ -1,89 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Micro Automation Services - Automation Consulting</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(to bottom, #f8f8f8, #ffffff);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Automation Consulting - KarvaDo</title>
+  <style>
+    /* Font & Base */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #333;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease-in;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 10px;
-            animation: fadeIn 1s ease-in-out;
-        }
+    h1, h2, h3 {
+      font-weight: bold;
+      color: #222;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    p {
+      color: #444;
+    }
 
-        header {
-            background: linear-gradient(to bottom, #007bff, #ffffff);
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
-        section {
-            padding: 2rem 0;
-        }
+    header {
+      background: linear-gradient(135deg, #00bcd4, #3f51b5);
+      color: #fff;
+      padding: 3rem 0;
+      text-align: center;
+      transition: background 0.5s ease;
+      animation: fadeIn 1.2s ease-in-out;
+    }
 
-        footer {
-            background: linear-gradient(to bottom, #ffffff, #007bff);
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            width: 100%;
-            margin-top: 2rem;
-        }
+    header h1 {
+      font-size: 3em;
+      margin: 0 0 0.5em;
+    }
 
-        html, body {
-            height: 100%;
-        }
-    </style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section { 
+      padding: 3rem 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    #service-details p {
+      font-size: 1.1em;
+    }
+
+    footer {
+      background: linear-gradient(to right, #3f51b5, #00bcd4);
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      animation: fadeIn 1.2s ease-in;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1 style="font-weight: bold;">KarvaDo</h1>
-            <p>Automation Consulting - Micro Automation Services for Streamlined Efficiency</p>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <h1>KarvaDo</h1>
+      <p>Micro Automation Services for Streamlined Efficiency</p>
+    </div>
+  </header>
 
-    <section id="service-details">
-        <div class="container">
-            <h2>Automation Consulting</h2>
-            <p>Receive expert guidance on identifying automation opportunities and implementing effective solutions.</p>
-        </div>
-    </section>
+  <section id="service-details">
+    <div class="container">
+      <h2>Automation Consulting</h2>
+      <p>Unlock the full potential of your business with our expert automation consulting services. We provide tailored guidance to identify automation opportunities, design effective strategies, and implement solutions that drive efficiency and growth.</p>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Get in touch to discuss your automation needs and how we can help your business.</p>
-            <p>Email: info@yourcompany.com</p>
-            <p>Phone: (123) 456-7890</p>
-        </div>
-    </section>
+      <h3>Our Approach</h3>
+      <ul>
+        <li><strong>Assessment:</strong> We begin with a thorough analysis of your current processes to pinpoint areas ripe for automation.</li>
+        <li><strong>Strategy:</strong> Next, we develop a comprehensive automation roadmap aligned with your business goals.</li>
+        <li><strong>Implementation:</strong> Leveraging cutting-edge technologies, we bring your automation vision to life.</li>
+        <li><strong>Optimization:</strong> Post-implementation, we continuously refine your systems to ensure peak performance.</li>
+      </ul>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 karvaDo. All rights reserved.</p>
-        </div>
-    </footer>
+      <h3>Benefits of Our Consulting</h3>
+      <ul>
+        <li>Increased Operational Efficiency</li>
+        <li>Reduced Costs and Errors</li>
+        <li>Improved Resource Allocation</li>
+        <li>Enhanced Scalability</li>
+        <li>Competitive Advantage</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Let's discuss how automation consulting can transform your business. Reach out today for a personalized consultation.</p>
+      <p>Email: info@yourcompany.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 KarvaDo. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>

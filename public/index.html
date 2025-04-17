@@ -1,161 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Micro Automation Services</title>
-    <style>      
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(to bottom, #f8f8f8, #ffffff);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Micro Automation Services</title>
+  <style>
+    /* Font & Base */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #333;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease-in;
+    }
 
-        header {
-            background: linear-gradient(to bottom, #007bff, #ffffff);
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    h1, h2, h3 {
+      font-weight: bold;
+      color: #222;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 10px;
-        }
+    p {
+      color: #444;
+    }
 
-        section {
-            padding: 2rem 0;
-        }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
-        .services {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
+    @keyframes scaleUp {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
 
-        .service {
-            width: 300px;
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-align: center;
-            display: block; /* Make the <a> fill the .service */
-            text-decoration: none; /* Remove underline from links */
-        }
+    header {
+      background: linear-gradient(135deg, #00bcd4, #3f51b5);
+      color: #fff;
+      padding: 3rem 0;
+      text-align: center;
+      transition: background 0.5s ease;
+      animation: fadeIn 1.2s ease-in-out;
+    }
 
-        .service:hover {
-            background-color: #6fbee6;
-            box-shadow: 0 4px 8px rgba(38, 57, 72, 0.1);
-        
-        }
+    header h1 {
+      font-size: 3em;
+      margin: 0 0 0.5em;
+    }
 
-        .service img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 10px; /* Center image and add some bottom margin */
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .service h3 {
-            margin-bottom: 10px;
-        }
+    section {
+      padding: 3rem 0;
+      animation: fadeIn 1s ease-in-out;
+    }
 
-        /* Updated footer styling */
-        footer {
-            background: linear-gradient(to bottom, #ffffff, #007bff);
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            width: 100%;
-            margin-top: 2rem; /* Added margin to separate from content */
-        }
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-        html, body {
-            height: 100%;
-            bottom: 0;
-        }     
-    </style>
+    .service {
+      width: 300px;
+      background: linear-gradient(to bottom, #ffffff, #e0f7fa);
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: scaleUp 0.5s ease forwards;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to bottom, #00c6ff, #0072ff);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .service img {
+      max-width: 80px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 1em;
+    }
+
+    footer {
+      background: linear-gradient(to right, #3f51b5, #00bcd4);
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    #contact p, #about p {
+      font-size: 1.1em;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service {
+        width: 90%;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1 style="font-weight: bold;">KarvaDo</h1>
-            <p>Micro Automation Services for Streamlined Efficiency</p>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <h1>KarvaDo</h1>
+      <p>Micro Automation Services for Streamlined Efficiency</p>
+    </div>
+  </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>We specialize in providing micro automation solutions to optimize your business processes.  Our services are designed to improve efficiency, reduce costs, and free up your team to focus on core activities. We tailor solutions to your specific needs, ensuring a perfect fit for your workflow. </p>
-        </div>
-    </section>
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We specialize in providing micro automation solutions to optimize your business processes. Our services are designed to improve efficiency, reduce costs, and free up your team to focus on core activities. We tailor solutions to your specific needs, ensuring a perfect fit for your workflow.</p>
+    </div>
+  </section>
 
-   <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services">
-                <a href="task-automation.html" class="service">
-                    <img src="assets/placeholder.png" alt="Task Automation">
-                    <h3 style="color:#333">Task Automation</h3>
-                    <p>Automate repetitive tasks, such as data entry, file processing, and report generation.</p>
-                </a>
-                <a href="workflow-optimization.html" class="service">
-                    <img src="assets/placeholder.png" alt="Workflow Optimization">
-                    <h3>Workflow Optimization</h3>
-                    <p>Streamline your workflows by automating processes that involve multiple steps and approvals.</p>
-                 </a>
-                <a href="system-integration.html" class="service">
-                    <img src="assets/placeholder.png" alt="System Integration">
-                    <h3>System Integration</h3>
-                    <p>Connect disparate systems to share data and automate processes across different platforms.</p>
-                 </a>
-                <a href="custom-scripting.html" class="service">
-                    <img src="assets/placeholder.png" alt="Custom Scripting">
-                    <h3>Custom Scripting</h3>
-                    <p>Develop custom scripts to automate specific tasks or processes that require unique solutions.</p>
-                 </a>
-                <a href="process-monitoring.html" class="service">
-                    <img src="assets/placeholder.png" alt="Process Monitoring">
-                    <h3>Process Monitoring</h3>
-                    <p>Implement monitoring tools to track the performance of automated processes and identify areas for improvement.</p>
-                 </a>
-                <a href="automation-consulting.html" class="service">
-                    <img src="assets/placeholder.png" alt="Automation Consulting">
-                    <h3>Automation Consulting</h3>
-                    <p>Receive expert guidance on identifying automation opportunities and implementing effective solutions.</p>
-                </a>
-            </div>
-        </div>
-    </section>
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services">
+        <a href="task-automation.html" class="service">
+          <img src="assets/placeholder.png" alt="Task Automation">
+          <h3>Task Automation</h3>
+          <p>Automate repetitive tasks, such as data entry, file processing, and report generation.</p>
+        </a>
+        <a href="workflow-optimization.html" class="service">
+          <img src="assets/placeholder.png" alt="Workflow Optimization">
+          <h3>Workflow Optimization</h3>
+          <p>Streamline your workflows by automating processes that involve multiple steps and approvals.</p>
+        </a>
+        <a href="system-integration.html" class="service">
+          <img src="assets/placeholder.png" alt="System Integration">
+          <h3>System Integration</h3>
+          <p>Connect disparate systems to share data and automate processes across different platforms.</p>
+        </a>
+        <a href="custom-scripting.html" class="service">
+          <img src="assets/placeholder.png" alt="Custom Scripting">
+          <h3>Custom Scripting</h3>
+          <p>Develop custom scripts to automate specific tasks or processes that require unique solutions.</p>
+        </a>
+        <a href="process-monitoring.html" class="service">
+          <img src="assets/placeholder.png" alt="Process Monitoring">
+          <h3>Process Monitoring</h3>
+          <p>Implement monitoring tools to track the performance of automated processes and identify areas for improvement.</p>
+        </a>
+        <a href="automation-consulting.html" class="service">
+          <img src="assets/placeholder.png" alt="Automation Consulting">
+          <h3>Automation Consulting</h3>
+          <p>Receive expert guidance on identifying automation opportunities and implementing effective solutions.</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Get in touch to discuss your automation needs and how we can help your business.</p>
-            <p>Email:  info@yourcompany.com</p>
-            <p>Phone: (123) 456-7890</p>
-        </div>
-    </section>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Get in touch to discuss your automation needs and how we can help your business.</p>
+      <p>Email: info@yourcompany.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </div>
+  </section>
 
-
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 karvaDo. All rights reserved.</p>
-        </div>
-    </footer>
-
-
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 KarvaDo. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>

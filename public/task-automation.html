@@ -1,33 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Automation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Micro Automation Services - Task Automation</title>
+  <style>
+    /* Font & Base */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #333;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    h1, h2, h3 {
+      font-weight: bold;
+      color: #222;
+    }
+
+    p {
+      color: #444;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scaleUp {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    header {
+      background: linear-gradient(135deg, #00bcd4, #3f51b5);
+      color: #fff;
+      padding: 3rem 0;
+      text-align: center;
+      transition: background 0.5s ease;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0 0 0.5em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 3rem 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    footer {
+      background: linear-gradient(to right, #3f51b5, #00bcd4);
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    #contact p, #service-details p {
+      font-size: 1.1em;
+      animation: fadeIn 1.5s ease;
+    }
+  </style>
 </head>
 <body>
+
+  <header>
     <div class="container">
-        <h1>Task Automation</h1>
-        <p>Automate repetitive tasks, such as data entry, file processing, and report generation.</p>
+      <h1>KarvaDo</h1>
+      <p>Task Automation - Micro Automation Services</p>
     </div>
+  </header>
+
+  <section id="service-details">
+    <div class="container">
+      <h2>Task Automation</h2>
+      <p>
+        Our Task Automation service streamlines your operations by automating repetitive
+        and routine tasks, freeing up your team to focus on more strategic work. We
+        specialize in automating processes such as data entry, file processing, report
+        generation, and other time-consuming activities.
+      </p>
+      <h3>Benefits:</h3>
+      <ul>
+        <li>Reduced manual effort and errors</li>
+        <li>Increased efficiency and productivity</li>
+        <li>Faster task completion times</li>
+        <li>Improved accuracy and data quality</li>
+        <li>Cost savings through optimized resource allocation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Get in touch to discuss your automation needs and how we can help your business.</p>
+      <p>Email: info@yourcompany.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 KarvaDo. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

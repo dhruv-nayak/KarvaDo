@@ -2,55 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Micro Automation Services - Custom Scripting</title>
     <style>
+        /* Font & Base */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(to bottom, #f8f8f8, #ffffff);
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 0;
+          line-height: 1.6;
+          background: linear-gradient(135deg, #e0f7fa, #ffffff);
+          color: #333;
+          overflow-x: hidden;
+          animation: fadeIn 1.5s ease-in;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 10px;
-            animation: fadeIn 1s ease-in-out;
+    
+        h1, h2, h3 {
+          font-weight: bold;
+          color: #222;
         }
-
+    
+        p {
+          color: #444;
+        }
+    
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+          0% { opacity: 0; transform: translateY(-10px); }
+          100% { opacity: 1; transform: translateY(0); }
         }
-
+    
+        @keyframes scaleUp {
+          from { transform: scale(0.95); opacity: 0; }
+          to { transform: scale(1); opacity: 1; }
+        }
+    
         header {
-            background: linear-gradient(to bottom, #007bff, #ffffff);
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+          background: linear-gradient(135deg, #00bcd4, #3f51b5);
+          color: #fff;
+          padding: 3rem 0;
+          text-align: center;
+          transition: background 0.5s ease;
+          animation: fadeIn 1.2s ease-in-out;
         }
-
+    
+        header h1 {
+          font-size: 3em;
+          margin: 0 0 0.5em;
+        }
+    
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+    
         section {
-            padding: 2rem 0;
+          padding: 3rem 0;
+          animation: fadeIn 1s ease-in-out;
         }
-
+    
+        .services {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 20px;
+        }
+    
+        .service {
+          width: 300px;
+          background: linear-gradient(to bottom, #ffffff, #e0f7fa);
+          margin-bottom: 20px;
+          padding: 20px;
+          border-radius: 12px;
+          text-align: center;
+          text-decoration: none;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          animation: scaleUp 0.5s ease forwards;
+        }
+    
+        .service:hover {
+          transform: scale(1.05);
+          background: linear-gradient(to bottom, #00c6ff, #0072ff);
+          color: #fff;
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+    
+        .service img {
+          max-width: 80px;
+          height: auto;
+          margin-bottom: 15px;
+        }
+    
+        .service h3 {
+          font-size: 1.5em;
+          margin-bottom: 10px;
+        }
+    
+        .service p {
+          font-size: 1em;
+        }
+    
         footer {
-            background: linear-gradient(to bottom, #ffffff, #007bff);
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            width: 100%;
-            margin-top: 2rem;
-        }
-
-        html, body {
-            height: 100%;
+          background: linear-gradient(to right, #3f51b5, #00bcd4);
+          color: #fff;
+          text-align: center;
+          padding: 1rem 0;
+          margin-top: 2rem;
+          animation: fadeIn 1.2s ease-in;
         }
     </style>
 </head>
@@ -66,7 +124,15 @@
     <section id="service-details">
         <div class="container">
             <h2>Custom Scripting</h2>
-            <p>Develop custom scripts to automate specific tasks or processes that require unique solutions.</p>
+            <p>Our custom scripting services offer tailored automation solutions for tasks that require unique approaches. We develop scripts to automate specific processes, integrate systems, and enhance functionality beyond standard software capabilities. Whether you need to automate data manipulation, create custom reports, or integrate disparate applications, our scripting solutions are designed to meet your precise requirements, improving efficiency and productivity.</p>
+            <h3>Key Benefits:</h3>
+            <ul>
+                <li><strong>Tailored Solutions:</strong> Scripts customized to your specific needs.</li>
+                <li><strong>Enhanced Efficiency:</strong> Automate complex and unique tasks.</li>
+                <li><strong>System Integration:</strong> Connect and automate processes across different platforms.</li>
+                <li><strong>Improved Productivity:</strong> Reduce manual effort and streamline workflows.</li>
+                <li><strong>Scalable Solutions:</strong> Scripts designed to grow with your business.</li>
+            </ul>
         </div>
     </section>
 
@@ -81,7 +147,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 karvaDo. All rights reserved.</p>
+            <p>&copy; 2025 KarvaDo. All rights reserved.</p>
         </div>
     </footer>
 

@@ -1,90 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Micro Automation Services - Process Monitoring</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(to bottom, #f8f8f8, #ffffff);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Process Monitoring - Micro Automation Services</title>
+  <style>
+    /* Font & Base */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #333;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease-in;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 10px;
-            animation: fadeIn 1s ease-in-out;
-        }
+    h1, h2, h3 {
+      font-weight: bold;
+      color: #222;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    p {
+      color: #444;
+    }
 
-        header {
-            background: linear-gradient(to bottom, #007bff, #ffffff);
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
-        section {
-            padding: 2rem 0;
-        }
+    @keyframes scaleUp {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
 
-        footer {
-            background: linear-gradient(to bottom, #ffffff, #007bff);
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            width: 100%;
-            margin-top: 2rem;
-        }
+    header {
+      background: linear-gradient(135deg, #00bcd4, #3f51b5);
+      color: #fff;
+      padding: 3rem 0;
+      text-align: center;
+      transition: background 0.5s ease;
+      animation: fadeIn 1.2s ease-in-out;
+    }
 
-        html, body {
-            height: 100%;
-        }
-    </style>
+    header h1 {
+      font-size: 3em;
+      margin: 0 0 0.5em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 3rem 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    footer {
+      background: linear-gradient(to right, #3f51b5, #00bcd4);
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    #contact p, #service-details p {
+      font-size: 1.1em;
+      animation: fadeIn 1.5s ease;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1 style="font-weight: bold;">KarvaDo</h1>
-            <p>Process Monitoring - Micro Automation Services for Streamlined Efficiency</p>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <h1>KarvaDo</h1>
+      <p>Process Monitoring - Micro Automation Services for Streamlined Efficiency</p>
+    </div>
+  </header>
 
-    <section id="service-details">
-        <div class="container">
-            <h2>Process Monitoring</h2>
-            <p>Implement monitoring tools to track the performance of automated processes and identify areas for improvement.</p>
-           
-        </div>
-    </section>
+  <section id="service-details">
+    <div class="container">
+      <h2>Process Monitoring</h2>
+      <p>
+        Our Process Monitoring service provides real-time insights into the performance
+        of your automated workflows, allowing you to identify bottlenecks, optimize
+        resource allocation, and ensure smooth operations. We use advanced tools to
+        track key metrics, generate detailed reports, and provide actionable
+        recommendations for continuous improvement.
+      </p>
+      <h3>Key Features:</h3>
+      <ul>
+        <li>Real-time tracking of process performance</li>
+        <li>Customizable dashboards and reports</li>
+        <li>Alerts and notifications for critical events</li>
+        <li>Performance analysis and optimization recommendations</li>
+        <li>Integration with existing systems and workflows</li>
+      </ul>
+      <h3>Benefits:</h3>
+      <ul>
+        <li>Improved efficiency and productivity</li>
+        <li>Reduced operational costs</li>
+        <li>Enhanced process reliability and uptime</li>
+        <li>Data-driven decision making</li>
+        <li>Continuous process improvement</li>
+      </ul>
+      <h3>Use Cases:</h3>
+      <ul>
+        <li>Monitoring automated production lines</li>
+        <li>Tracking the progress of multi-stage workflows</li>
+        <li>Analyzing the performance of robotic process automation (RPA)</li>
+        <li>Optimizing resource utilization in automated systems</li>
+        <li>Ensuring compliance and auditability of automated processes</li>
+      </ul>
+    </div>
+  </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Get in touch to discuss your automation needs and how we can help your business.</p>
-            <p>Email: info@yourcompany.com</p>
-            <p>Phone: (123) 456-7890</p>
-        </div>
-    </section>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Get in touch to discuss your automation needs and how we can help your business.</p>
+      <p>Email: info@yourcompany.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </div>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 karvaDo. All rights reserved.</p>
-        </div>
-    </footer>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 KarvaDo. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
