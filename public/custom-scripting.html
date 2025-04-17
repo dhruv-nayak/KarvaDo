@@ -135,6 +135,30 @@
             </ul>
         </div>
     </section>
+    <div style="margin-top: 20px; text-align: center;">
+        <button id="tryNowButton" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Try Now</button>
+    </div>
+
+    <div id="output" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; white-space: pre-wrap;">
+        <!-- Output will be displayed here -->
+    </div>
+
+    <script>
+        document.getElementById("tryNowButton").addEventListener("click", function() {
+            var outputDiv = document.getElementById("output");
+            outputDiv.textContent = "Running script...";
+            fetch('/.well-known/run_script', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ script: 'custom_scripting.py' }),
+            })
+            .then(response => response.json())
+            .then(data => outputDiv.textContent = data.output)
+            .catch(error => outputDiv.textContent = "An error occurred.");
+        });
+    </script>
 
     <section id="contact">
         <div class="container">

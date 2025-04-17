@@ -120,6 +120,26 @@
       </ul>
     </div>
   </section>
+  <button id="tryNowButton" style="display: block; margin: 20px auto; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Try Now</button>
+  <div id="output" style="white-space: pre-wrap; margin-top: 20px; text-align: center;"></div>
+
+  <script>
+    document.getElementById('tryNowButton').addEventListener('click', function() {
+      var outputDiv = document.getElementById('output');
+      outputDiv.textContent = 'Running script...';
+
+      fetch('/.well-known/zappier/run-script', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ script: 'process_monitoring.py' }),
+      })
+      .then(response => response.json())
+      .then(data => outputDiv.textContent = data.output || 'An error occurred.')
+      .catch(error => outputDiv.textContent = 'An error occurred.');
+    });
+  </script>
 
   <section id="contact">
     <div class="container">

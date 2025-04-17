@@ -104,6 +104,42 @@
     </div>
   </section>
 
+  <button id="tryNowButton">Try Now</button>
+
+  <div id="output" style="margin-top: 20px;">
+    <!-- Output will be displayed here -->
+  </div>
+
+  <script>
+    document.getElementById('tryNowButton').addEventListener('click', function() {
+      const outputDiv = document.getElementById('output');
+      outputDiv.textContent = 'Running script...';
+
+      fetch('/terminal_command', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ command: 'python task_automation.py' }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        outputDiv.textContent = data.result;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        outputDiv.textContent = 'An error occurred.';
+      });
+    });
+  </script>
+
+  
+  <button id="tryNowButton">Try Now</button>
+  
+  <div id="output" style="margin-top: 20px;">
+    <!-- Output will be displayed here -->
+  </div>
+
   <section id="contact">
     <div class="container">
       <h2>Contact Us</h2>

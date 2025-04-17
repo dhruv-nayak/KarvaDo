@@ -26,6 +26,27 @@
             </ul>
             <p>Ready to integrate your systems? Contact us today!</p>
         </div>
+        <button id="tryNowButton">Try Now</button>
+        <div id="output" style="margin-top: 20px;"></div>
+        <script>
+            document.getElementById('tryNowButton').addEventListener('click', function() {
+                var outputDiv = document.getElementById('output');
+                outputDiv.innerHTML = 'Running script...';
+
+                fetch('/.well-known/run_script', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ script: 'system_integration.py' })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    outputDiv.innerHTML = data.output;
+                })
+                .catch(error => outputDiv.innerHTML = 'An error occurred.');
+            });
+        </script>
     </section>
 
     <section id="contact">
